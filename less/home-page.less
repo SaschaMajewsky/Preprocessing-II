@@ -1,84 +1,145 @@
-.home {
-  margin: 20 auto;
-  
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-
-  .header {
-    .header-text {
-        margin-top: 2rem;
-        border-bottom: 1px dashed darken(lightgrey, 10%);
-        .header-head-text{
-          font-family: 'Indie Flower', cursive;
-          font-size: 31px;
-        }
-        .header-sub-text {
-          font-size: 14px;
-        }
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    @media @mobile {
+      max-width: 500px;
+      overflow-x: hidden;
     }
 
-  }
-
-  .content-section {
-    margin: 30px 0;
+  .home {
+    margin: 20 auto;
+    max-width: 700px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 
-   
     
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
+    @media @mobile {
+      overflow-x: hidden;
     }
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+    .header {
+      @media @mobile {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      .header-text {
+          margin-top: 2rem;
+          border-bottom: 1px dashed darken(lightgrey, 10%);
+          .header-head-text{
+            font-family: 'Indie Flower', cursive;
+            font-size: 31px;
+          }
+          .header-sub-text {
+            font-size: 14px;
+          }
+      }
+
+    }
+
+    .content-section {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @media @mobile {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 2rem;
+        margin-left: 4rem;
+       }
+
+      .text-content {
+        width: 48%;
+        padding-right: 1%;
+        @media @mobile {
+          width: 95%;
+         }
+      }
+
+      .img-content {
+        width: 48%;
+        padding-left: 1%;
+        @media @mobile {
+          width: 90%;
+          margin-right: 2rem;
+         }
+
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .inverse-content {
+      @media @mobile {
+        display: flex;
+        flex-direction: column-reverse;
+       }
+
+    }
+
+    .inverse-content {
+      padding-bottom: 30px;
+      border-bottom: 2px dashed @navigation-border;
+
+      .text-content {
+        padding-left: 1%;
+        padding-right: 0;
+        @media @mobile {
+          width: 95%;
+         }
+      }
+
+      .img-content {
+        padding-right: 1%;
+        padding-left: 0;
+        @media @mobile {
+          width: 90%;
+         }
+      }
+    }
+
+    .content-destination {
+      width: 75%;
+      margin: 0 auto 30px;
+      @media @mobile {
+        width: 80%;
+        margin-left: 3rem;
+      }
+      .content-pick-destination {
+        @media @mobile {
+          margin: 0px !important;
+        }
+      }
 
       img {
         border-radius: 10px;
       }
     }
-  }
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .content-pick {
+      padding-top: 30px;
+      border-top: 2px dashed @navigation-border;
+      display: flex;
+      justify-content: space-between;
+      @media @mobile {
+        flex-wrap: wrap;
+        margin-right: 5rem;
+        margin-left: 3rem;
+        justify-content: space-around;
+      }
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
-  }
-
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
-  }
-
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
-
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-      .btn {
-        text-align: center;
-        .custom-button(#008081, white, 17px, 10px, 1.3rem 3rem 1.3rem 3rem, 0.8rem 0.8rem 0.8rem 0.8rem);
+      .destination {
+        width: 30%;
+        margin-bottom: 30px;
+        @media @mobile {
+          width: 100%;
+        }
+        .btn {
+          text-align: center;
+          .custom-button(#008081, white, 17px, 10px, 1.3rem 3rem 1.3rem 3rem, 0.8rem 0.8rem 0.8rem 0.8rem);
+        }
       }
     }
   }
