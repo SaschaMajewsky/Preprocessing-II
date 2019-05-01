@@ -226,6 +226,9 @@ img {
   font-family: 'Indie Flower', cursive;
   font-size: 31px;
 }
+.home .header .header-text .header-sub-text {
+  font-size: 14px;
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
@@ -271,4 +274,13 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  text-align: center;
+  background-color: #008081;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  padding: 1.3rem 3rem 1.3rem 3rem;
+  margin: 0.8rem 0.8rem 0.8rem 0.8rem;
 }
