@@ -1,1 +1,68 @@
 // Navigation Styles here
+@decent-space: 1.5rem;
+@background-blue: rgba(10, 82, 141, 0.2);
+
+
+.container{
+    @media @mobile {
+        max-width: 500px;
+        overflow-x: hidden;
+      }
+  }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed darken(lightgrey, 10%);
+        @media @mobile {
+            flex-direction: column;
+            max-width: 100%;
+            align-items: center;
+          }
+      .nav-text-div {
+          min-width: 20rem;
+        .nav-text {
+            font-size: 40px;
+            font-family: 'Indie Flower', cursive;
+            width: 100%;
+            display: flex;
+            margin-top: 3rem;
+            margin-left: 5rem;
+            padding-bottom: 2rem;
+            justify-content: flex-start;
+            @media @mobile {
+              justify-content: center;
+              margin-left: 0px;
+            }
+        }
+      }
+
+      .navBar {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        
+        @media @mobile {
+            max-width: 100%;
+            justify-content: center;
+            margin-right: 0px;
+            overflow-x: hidden;
+          }
+
+        a {
+          font-size: 15px;
+          font-family: "Merriweather", serif;
+          color: black;
+          margin: 3.5rem @decent-space @decent-space @decent-space;
+          text-decoration: none;
+          @media @mobile {
+            margin-top: 0px;
+          }
+        }
+
+        a:hover {
+          text-decoration: underline;
+          background: @background-blue;
+          border-radius: 4px;
+        }
+    }
+}
